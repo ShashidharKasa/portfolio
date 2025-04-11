@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { Link } from 'react-router-dom'
 import { motion, useInView } from "framer-motion";
 import  Button  from "./components/ui/Button";
 
@@ -170,9 +171,9 @@ export default function Portfolio() {
         >
           Senior Cloud DevOps Engineer / Site Reliability Engineer
         </motion.p>
-        <a href="./Resume.pdf" download="" className="z-10">
+        <Link to="./Resume.pdf" download="" className="z-10">
         <button>Download Resume</button>
-        </a>
+        </Link>
       </section>
 
       {/* About */}
