@@ -87,9 +87,9 @@ const experiences = [
     ],
   },
 ];
-const onSubmit = async (event) => {
-  event.preventDefault();
-  const formData = new FormData(event.target);
+const onSubmit = async (e) => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
 
   formData.append("access_key", "cc6964cf-e4ef-4f56-9a00-129874d3445e");
 
@@ -237,7 +237,7 @@ export default function Portfolio() {
       {/* Contact */}
       <section className="py-16 bg-gray-100 px-6 text-center">
         <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
-        <form  className="max-w-xl mx-auto space-y-4">
+        <form onSubmit={onSubmit}  className="max-w-xl mx-auto space-y-4">
           <input
             type="text"
             name="name"
@@ -259,7 +259,7 @@ export default function Portfolio() {
             className="w-full p-3 rounded border"
             required
           />
-          <Button type="submit" onClick={onSubmit()}>Send Message</Button>
+          <Button type="submit">Send Message</Button>
         </form>
       </section>
     </div>
