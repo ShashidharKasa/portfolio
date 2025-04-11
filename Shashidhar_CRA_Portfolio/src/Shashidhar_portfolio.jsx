@@ -103,6 +103,7 @@ const onSubmit = async (e) => {
       Accept: "application/json",
     },
     body: json,
+    mode: "no-cors",
   }).then((res) => res.json());
 
   if (res.success) {
