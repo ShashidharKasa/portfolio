@@ -107,7 +107,9 @@ const onSubmit = async (e) => {
 
   if (res.success) {
     console.log("Success",res);
-    setTimeout(() => {window.location.reload();},1000);
+    setTimeout(() => {window.location.reload();
+                      window.scrollTo({ top: 0, behaviour: 'smooth'});}
+               ,1000);
   } else {
     console.log(res);
   }
