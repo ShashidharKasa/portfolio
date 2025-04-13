@@ -91,7 +91,7 @@ const onSubmit = async (e) => {
   e.preventDefault();
   const formData = new FormData(e.target);
 
-  formData.append("access_key", "da4aae8e-ffe6-4b4f-9154-3b7ef7897c74");
+  formData.append("access_key", "cc6964cf-e4ef-4f56-9a00-129874d3445e");
 
   const object = Object.fromEntries(formData);
   const json = JSON.stringify(object);
@@ -103,7 +103,6 @@ const onSubmit = async (e) => {
       Accept: "application/json",
     },
     body: json,
-    mode: "no-cors",
   }).then((res) => res.json());
 
   if (res.success) {
