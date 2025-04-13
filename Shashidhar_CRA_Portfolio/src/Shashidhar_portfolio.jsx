@@ -107,7 +107,7 @@ const onSubmit = async (e) => {
 
   if (res.success) {
     console.log("Success",res);
-    window.location.reload();
+    setTimeout(() => {window.location.reload();},1000);
   } else {
     console.log(res);
   }
