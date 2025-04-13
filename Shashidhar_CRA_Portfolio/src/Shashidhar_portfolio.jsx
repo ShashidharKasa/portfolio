@@ -108,6 +108,8 @@ const onSubmit = async (e) => {
 
   if (res.success) {
     console.log("Success");
+  } else {
+    console.log(res);
   }
 };
 
