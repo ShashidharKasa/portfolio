@@ -107,7 +107,7 @@ const onSubmit = async (e) => {
   }).then((res) => res.json());
 
   if (res.success) {
-    window.location.reload();
+    console.log("Success");
   }
 };
 
