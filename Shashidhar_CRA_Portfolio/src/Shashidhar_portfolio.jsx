@@ -106,7 +106,7 @@ const onSubmit = async (e) => {
   }).then((res) => res.json());
 
   if (res.success) {
-    console.log("Success");
+    console.log("Success",res);
   } else {
     console.log(res);
   }
