@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import  Button  from "./components/ui/Button";
+import Button from "./components/ui/Button";
+import resume from "./asset/resume.pdf";
 
 const skills = [
   "AWS",
@@ -106,10 +107,11 @@ const onSubmit = async (e) => {
   }).then((res) => res.json());
 
   if (res.success) {
-    console.log("Success",res);
-    setTimeout(() => {window.location.reload();
-                      window.scrollTo({ top: 0, behaviour: 'smooth'});}
-               ,1000);
+    console.log("Success", res);
+    setTimeout(() => {
+      window.location.reload();
+      window.scrollTo({ top: 0, behaviour: "smooth" });
+    }, 1000);
   } else {
     console.log(res);
   }
@@ -175,9 +177,11 @@ export default function Portfolio() {
         >
           Senior Cloud DevOps Engineer / Site Reliability Engineer
         </motion.p>
-        <Button variant="outline" className="z-10">
-          Download Resume
-        </Button>
+        <a href={resume} download="resume">
+          <Button variant="outline" className="z-10">
+            Download Resume
+          </Button>
+        </a>
       </section>
 
       {/* About */}
@@ -242,7 +246,7 @@ export default function Portfolio() {
       {/* Contact */}
       <section className="py-16 bg-gray-100 px-6 text-center">
         <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
-        <form onSubmit={onSubmit}  className="max-w-xl mx-auto space-y-4">
+        <form onSubmit={onSubmit} className="max-w-xl mx-auto space-y-4">
           <input
             type="text"
             name="name"
