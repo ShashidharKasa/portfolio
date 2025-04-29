@@ -177,7 +177,7 @@ export default function Portfolio() {
         >
           Senior Cloud DevOps Engineer / Site Reliability Engineer
         </motion.p>
-        <a href={resume} download="resume">
+        <a href={resume} download="">
           <Button variant="outline" className="z-10">
             Download Resume
           </Button>
